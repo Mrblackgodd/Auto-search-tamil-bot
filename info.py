@@ -15,7 +15,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '25377875'))
 API_HASH = environ.get('API_HASH', 'cf80e342be48570ca2e4c9d2c7695413')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6158242764:AAH7Ynhh-_Vartl_5NZksXFPI_9QSYzfw-w")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6037293963:AAG3ee5s4KIN_p2EfbBrpTGIhzNLkqVSmyA")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -43,21 +43,21 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Renamebot4gb:nehalsingh969797@cluster0.hbyiagi.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Supermanpro:nehalsingh969797@cluster0.homi1db.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "rosegarsen")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', 'False'))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'seturl.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '3f2874b0090980df0e96e8acd809d680d70d2c8d')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'MENeVZcapqUmOXw9fyRSQm9Z6pu2')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+gkhvihXg5K5kM2Rl')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/gfdgfdhdttrhh')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/psycobotz')
 TUTORIAL = environ.get('TUTORIAL', 'https://youtu.be/iZLpKqW88v4')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 MSG_ALRT = environ.get('MSG_ALRT', 'Wʜᴀᴛ Aʀᴇ Yᴏᴜ Lᴏᴏᴋɪɴɢ Aᴛ ?')
