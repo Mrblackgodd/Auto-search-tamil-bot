@@ -538,7 +538,7 @@ async def get_verify_shorted_link(link):
         https = "https"
         link = link.replace("http", https)
 
-    if URL == "api.shareus.in":
+    if URL == "api.shareus.io":
         url = f"https://{URL}/shortLink"
         params = {"token": API,
                   "format": "json",
@@ -552,11 +552,11 @@ async def get_verify_shorted_link(link):
                         return data["shortlink"]
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/shortLink?token={API}&format=json&link={link}'
+                        return f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'https://{URL}/shortLink?token={API}&format=json&link={link}'
+            return f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}'
     else:
         url = f'https://{URL}/api'
         params = {'api': API,
