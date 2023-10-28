@@ -539,7 +539,7 @@ async def get_verify_shorted_link(link):
         link = link.replace("http", https)
 
     if URL == "api.shareus.io":
-        url = f"https://{URL}/direct_link"
+        url = f"https://{URL}/Shortlink"
         params = {"token": API,
                   "format": "json",
                   "link": link,
@@ -552,11 +552,11 @@ async def get_verify_shorted_link(link):
                         return data["shortlink"]
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}={direct_link}'
+                        return direct_link f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'{URL}/direct_link?api_key={API}&pages=3&link={link}={direct_link}'
+            return direct_linkf'{URL}/direct_link?api_key={API}&pages=3&link={link}'
     else:
         url = f'https://{URL}/api'
         params = {'api': API,
@@ -570,11 +570,11 @@ async def get_verify_shorted_link(link):
                         return data['shortenedUrl']
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/api?api={API}&link={link}={direct_link}'
+                        return f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'{URL}/api?api={API}&link={link}={direct_link}'
+            return f'{URL}/api?api={API}&link={link}'
 
 async def check_token(bot, userid, token):
     user = await bot.get_users(userid)
