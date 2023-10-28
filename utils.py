@@ -552,11 +552,11 @@ async def get_verify_shorted_link(link):
                         return data["shortlink"]
                     else:
                         logger.error(f"Error: {data['message']}")
-                        return f'https://{URL}/direct_link?api_key={API}&pages=3&link={link}'
+                        return f'https://{URL}/Shortlink?api={API}&link={link}'
 
         except Exception as e:
             logger.error(e)
-            return f'{URL}/direct_link?api_key={API}&pages=3&link={link}'
+            return f'{URL}/Shortlink?api={API}&link={link}'
     else:
         url = f'https://{URL}/api'
         params = {'api': API,
