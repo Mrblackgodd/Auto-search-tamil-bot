@@ -539,7 +539,7 @@ async def get_verify_shorted_link(link):
         link = link.replace("http", https)
 
     if URL == "api.shareus.io":
-        url = f"https://{URL}/shortLink"
+        url = f"https://{URL}/direct_link"
         params = {"token": API,
                   "format": "json",
                   "link": link,
